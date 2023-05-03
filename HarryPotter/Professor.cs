@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Professor
+     class Professor : AllowedPerson
     {
     }
 }

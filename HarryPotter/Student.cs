@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Student
+     class Student : AllowedPerson
     {
+        private int _passedCourses;
+        private int _semester;
+        private int _dormNumber;
+
+        public int PassedCourses { get { return _passedCourses; }}
+        public int Semester { get { return _semester; } }
+
+        public int DormNumber { get { return _dormNumber; }}
+        
     }
 }

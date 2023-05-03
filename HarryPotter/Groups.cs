@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Group
+     class Groups
     {
+        private Enums _type;
+        private int _score;
+        //group members list
+        //quidditch members list
+
+        public int Score
+        {
+            get { return _score; }
+        }
+        public Enums Type { get { return _type; } }
     }
 }

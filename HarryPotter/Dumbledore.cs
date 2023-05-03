@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Dumbledore
+     class Dumbledore : AllowedPerson
     {
     }
 }
