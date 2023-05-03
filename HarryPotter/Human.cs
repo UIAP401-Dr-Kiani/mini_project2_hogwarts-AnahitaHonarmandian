@@ -15,7 +15,7 @@ namespace HarryPotter
         private Human _Father;
         private readonly string _username;
         private string password;
-        private RaceBlood race;
+        private Enums race;
 
         public string FirstName
         {
@@ -45,7 +45,7 @@ namespace HarryPotter
         {
             get { return password; }
         }
-        public RaceBlood Race
+        public Enums Race
         {
             get { return race; }
         }
