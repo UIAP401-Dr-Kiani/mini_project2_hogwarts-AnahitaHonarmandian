@@ -31,7 +31,7 @@ namespace HarryPotter
         {
             get { return _BirthYear; }
         }
-        public Boolean Sex
+        public Boolean Gender
         {
             get { return _gender; }
         }
