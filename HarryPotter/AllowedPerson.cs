@@ -9,12 +9,12 @@ namespace HarryPotter
      class AllowedPerson : Human
     {
         private int _roomNumber;
-        //schedule
+        
         private Enums _pet;
         private Groups _group;
         private Boolean _hasBaggage;
         private Enums _role;
-        //recieved letter
+        //TODO- received letter and schedule
 
         public int RoomNumber
         {

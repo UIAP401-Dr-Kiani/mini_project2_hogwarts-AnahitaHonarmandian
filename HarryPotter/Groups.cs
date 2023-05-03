@@ -10,7 +10,7 @@ namespace HarryPotter
     {
         private Enums _type;
         private int _score;
-        //group members list
+        //TODO-group members list
         //quidditch members list
 
         public int Score
