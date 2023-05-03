@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HarryPotter.Enums;
+
 
 namespace HarryPotter
 {
@@ -11,11 +13,11 @@ namespace HarryPotter
         private string _firstName;
         private string _lastName;
         private uint _BirthYear;
-        private Boolean _sex;
+        private Boolean _gender;
         private Human _Father;
         private readonly string _username;
         private string password;
-        private Enums race;
+        private RaceBlood race;
 
         public string FirstName
         {
@@ -31,7 +33,7 @@ namespace HarryPotter
         }
         public Boolean Sex
         {
-            get { return _sex; }
+            get { return _gender; }
         }
         public Human Father
         {
@@ -45,7 +47,7 @@ namespace HarryPotter
         {
             get { return password; }
         }
-        public Enums Race
+        public RaceBlood Race
         {
             get { return race; }
         }

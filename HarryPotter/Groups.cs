@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
      class Groups
     {
-        private Enums _type;
+        private Types _type;
         private int _score;
         //TODO-group members list
         //quidditch members list
@@ -17,6 +18,6 @@ namespace HarryPotter
         {
             get { return _score; }
         }
-        public Enums Type { get { return _type; } }
+        public Types Type { get { return _type; } }
     }
 }

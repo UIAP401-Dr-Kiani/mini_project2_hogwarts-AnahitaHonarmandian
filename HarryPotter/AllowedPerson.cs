@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
@@ -10,17 +11,17 @@ namespace HarryPotter
     {
         private int _roomNumber;
         
-        private Enums _pet;
+        private Pet _pet;
         private Groups _group;
         private Boolean _hasBaggage;
-        private Enums _role;
+        private Role _role;
         //TODO- received letter and schedule
 
         public int RoomNumber
         {
             get { return _roomNumber; }
         }
-        public Enums Pet
+        public Pet Pet
         {
             get { return _pet; }
         }
@@ -32,7 +33,7 @@ namespace HarryPotter
         {
             get { return _hasBaggage; }
         }
-        public Enums Role
+        public Role Role
         {
             get { return _role; }
         }

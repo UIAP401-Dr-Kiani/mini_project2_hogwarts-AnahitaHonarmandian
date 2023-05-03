@@ -3,27 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    enum Enums
+    class Enums
     {
+        public enum RaceBlood
+        {
+            HALF_BLOOD,
+            PURE_BLOOD,
+            MUGGLE_BLOOD
+        }
+       
+        public enum Pet {
+            CAT,
+            RAT,
+            OWL
+        }
         
-        HALF_BLOOD,
-        PURE_BLOOD,
-        MUGGLE_BLOOD ,
-
-        CAT,
-        RAT,
-        OWL,
-
-        TEACHER,
-        STUDENT,
-
-        HUFFLEPUFF,
-        GRYFFINDOR,
-        RAVENCLAW,
-        SLYTHERIN
+        public enum Role {
+            TEACHER,
+            STUDENT
+        }
+        
+        public enum Types {
+            HUFFLEPUFF,
+            GRYFFINDOR,
+            RAVENCLAW,
+            SLYTHERIN
+        }
+        
         
     }
 }
