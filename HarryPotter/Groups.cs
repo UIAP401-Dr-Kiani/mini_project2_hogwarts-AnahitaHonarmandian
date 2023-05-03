@@ -9,15 +9,18 @@ namespace HarryPotter
 {
      class Groups
     {
-        private Types _type;
-        private int _score;
+        //private Types _type;
+        //private int _score;
+
         //TODO-group members list
         //quidditch members list
 
-        public int Score
+        public int Score{ get ;  }
+        public Types Type { get ; }
+
+        public Groups()
         {
-            get { return _score; }
+            Score = Score;
         }
-        public Types Type { get { return _type; } }
     }
 }

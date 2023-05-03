@@ -9,33 +9,35 @@ namespace HarryPotter
 {
      class AllowedPerson : Human
     {
-        private int _roomNumber;
+       
         
-        private Pet _pet;
-        private Groups _group;
-        private Boolean _hasBaggage;
-        private Role _role;
         //TODO- received letter and schedule
 
-        public int RoomNumber
-        {
-            get { return _roomNumber; }
-        }
-        public Pet Pet
-        {
-            get { return _pet; }
-        }
+        public int RoomNumber{ get  ;}
+        public Pet Pet { get ; }
+        
         public Groups Group
         {
-            get { return _group; }
+            get ;
         }
         public Boolean HasBaggage
         {
-            get { return _hasBaggage; }
+            get ;
         }
         public Role Role
         {
-            get { return _role; }
+            get ;
         }
+
+       public AllowedPerson(int roomNumber, Pet pet, Groups group, bool hasBaggage, Role role)
+        {
+            RoomNumber = roomNumber;
+            Pet = pet;
+            Group = group;
+            HasBaggage = hasBaggage;
+            Role = role;
+        }
+
+        public AllowedPerson() { }
     }
 }

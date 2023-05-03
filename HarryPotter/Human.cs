@@ -9,7 +9,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    class Human
+    abstract class Human
     {
         private string _firstName;
         private string _lastName;

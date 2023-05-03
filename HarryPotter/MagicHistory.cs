@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class MagicHistory
+     class MagicHistory : Subjects
     {
+       
+        //TODO-CHARMS
+
+        public List<MagicHistory> Charms { get ; }
+
+        public MagicHistory(List<MagicHistory> Charms)
+        {
+            Charms = Charms;
+        }
     }
 }

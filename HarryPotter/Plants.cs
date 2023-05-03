@@ -8,11 +8,15 @@ namespace HarryPotter
 {
      class Plants : Subjects
     {
-        private string _name;
-        private int _count;
+       
 
-        public string Name { get { return _name; } }    
-        public int Count { get { return _count; } }
+        public string Name { get ; }    
+        public int Count { get ; }
 
+        public Plants(string name, int count)
+        {
+            Name = name;
+            Count = count;
+        }
     }
 }

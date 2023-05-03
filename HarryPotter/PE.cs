@@ -8,8 +8,11 @@ namespace HarryPotter
 {
      class PE : Subjects
     {
-        private string _peType;
+       
+        public string PeType { get ; }
 
-        public string PeType { get { return _peType; } }
+        public PE(string PeType) {
+            this.PeType = PeType;
+        }
     }
 }
