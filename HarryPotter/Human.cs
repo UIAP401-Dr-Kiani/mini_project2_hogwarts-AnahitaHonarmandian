@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Human
+     class Human
     {
+        private string _firstName;
+        private string _lastName;
+        private uint _BirthYear;
+        private Boolean _sex;
+        private Human _Father;
+        private string username;
+        private string password;
+        private RaceBlood race;
+        
     }
+    
 }
