@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class PE
+     class PE : Subjects
     {
+        private string _peType;
+
+        public string PeType { get { return _peType; } }
     }
 }

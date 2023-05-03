@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Lessons
+     class Subjects
     {
+        //TODO-time
+        private int _numberOfStudents;
+        private int _capacity;
+        private uint _semesterPresentation;
+        private string _name;
+
+        public int numberOfStudents { get { return _numberOfStudents; } }
+        public int capacity { get { return _capacity; } }
+        public uint semesterPresentation { get {  return _semesterPresentation; } }
+        public string name { get { return _name; } }
     }
 }

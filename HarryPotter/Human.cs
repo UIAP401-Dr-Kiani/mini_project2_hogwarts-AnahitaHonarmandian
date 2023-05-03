@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using static HarryPotter.Enums;
@@ -21,35 +22,63 @@ namespace HarryPotter
 
         public string FirstName
         {
-            get { return _firstName; }
+            get;
         }
         public string LastName
         {
-            get { return _lastName; }
+            get ;
         }
-        public uint BirthYear
+
+        public string FullName { get { return FirstName + ' ' + LastName; } }
+        public int BirthYear
         {
-            get { return _BirthYear; }
+            get ;
         }
         public Boolean Gender
         {
-            get { return _gender; }
+            get ;
         }
         public Human Father
         {
-            get { return _Father; }
+            get ;
         }
         public string Username
         {
-            get { return _username; }
+            get ;
         }
         public string Password
         {
-            get { return password; }
+            get ;
         }
         public RaceBlood Race
         {
-            get { return race; }
+            get ;
         }
+
+        public Human()
+        {
+            FirstName = "";
+            LastName = "";
+            BirthYear = 0;
+            Gender = true;
+            //Father = new Person();
+            Username = "Admin";
+            Password = "1";
+        }
+
+        public Human(string firstName, string lastName, int birthyear, bool gender, Human father, string username, string password, RaceBlood race)
+        {
+            FirstName = string.IsNullOrEmpty(firstName) ? "No Name" : firstName;
+
+            LastName = lastName;
+            BirthYear = Math.Abs(birthyear);
+
+            Gender = gender;
+            Father = father;
+            Username = username;
+            Password = password;
+            Race = race;
+        }
+
     }
 }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Plants
+     class Plants : Subjects
     {
+        private string _name;
+        private int _count;
+
+        public string Name { get { return _name; } }    
+        public int Count { get { return _count; } }
+
     }
 }

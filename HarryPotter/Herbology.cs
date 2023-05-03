@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Herbology
+     class Herbology : Subjects
+    //study of magical plants
     {
+        //TODO - fields and properties
     }
 }
