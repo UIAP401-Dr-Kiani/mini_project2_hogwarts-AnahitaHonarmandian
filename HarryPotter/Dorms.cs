@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     class Dumbledore : AllowedPerson
+    internal class Dorms
     {
-        private Dorms _dormList;
-
-        public Dorms DormList { get { return _dormList; } }
-
     }
 }
