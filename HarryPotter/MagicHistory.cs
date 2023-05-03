@@ -13,9 +13,9 @@ namespace HarryPotter
 
         public List<MagicHistory> Charms { get ; }
 
-        public MagicHistory(List<MagicHistory> Charms)
+        public MagicHistory(List<MagicHistory> charms)
         {
-            Charms = Charms;
+            Charms = charms;
         }
     }
 }

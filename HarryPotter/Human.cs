@@ -9,51 +9,27 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    abstract class Human
+     class Human
     {
-        private string _firstName;
-        private string _lastName;
-        private uint _BirthYear;
-        private Boolean _gender;
-        private Human _Father;
-        private readonly string _username;
-        private string password;
-        private RaceBlood race;
-
-        public string FirstName
-        {
-            get;
-        }
-        public string LastName
-        {
-            get ;
-        }
-
+        
+        public string FirstName { get; }
+        
+        public string LastName { get; }
+      
         public string FullName { get { return FirstName + ' ' + LastName; } }
-        public int BirthYear
-        {
-            get ;
-        }
-        public Boolean Gender
-        {
-            get ;
-        }
-        public Human Father
-        {
-            get ;
-        }
-        public string Username
-        {
-            get ;
-        }
-        public string Password
-        {
-            get ;
-        }
-        public RaceBlood Race
-        {
-            get ;
-        }
+       
+        public int BirthYear { get; }
+       
+        public bool Gender { get; }
+
+        public Human Father { get; }
+      
+        public string Username { get; }
+        
+        public string Password { get; }
+       
+        public RaceBlood Race { get; }
+     
 
         public Human()
         {

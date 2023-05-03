@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 namespace HarryPotter
 {
      class PE : Subjects
+        //Physical Education
     {
-       
         public string PeType { get ; }
 
-        public PE(string PeType) {
-            this.PeType = PeType;
+        public PE(string peType) 
+        {
+            PeType = peType;
         }
     }
 }

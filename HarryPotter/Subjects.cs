@@ -8,15 +8,25 @@ namespace HarryPotter
 {
      class Subjects
     {
-        //TODO-time
-        private int _numberOfStudents;
-        private int _capacity;
-        private uint _semesterPresentation;
-        private string _name;
+        
 
-        public int numberOfStudents { get { return _numberOfStudents; } }
-        public int capacity { get { return _capacity; } }
-        public uint semesterPresentation { get {  return _semesterPresentation; } }
-        public string name { get { return _name; } }
+        //TODO-time
+
+        public int NumberOfStudents { get; }
+        public int Capacity { get ; }
+        public uint SemesterPresentation { get ; }
+        public string Name { get ; }
+
+        public Subjects(int numberOfStudents, int capacity, uint semesterPresentation, string name)
+        {
+            NumberOfStudents = numberOfStudents;
+            Capacity = capacity;
+            SemesterPresentation = semesterPresentation;
+            Name = name;
+        }
+
+
+
+        public Subjects() { }
     }
 }

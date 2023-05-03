@@ -9,11 +9,11 @@ namespace HarryPotter
      class Professor : AllowedPerson
     {
         
-
         public bool SimultaneousTeaching { get ; }
 
-        public Professor(bool SimultaneousTeaching) { 
-            SimultaneousTeaching = true;
+        public Professor(bool simultaneousTeaching) 
+        { 
+           SimultaneousTeaching = simultaneousTeaching;
         }
     }
 }

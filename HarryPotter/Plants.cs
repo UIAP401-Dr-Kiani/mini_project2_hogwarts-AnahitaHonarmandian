@@ -10,12 +10,12 @@ namespace HarryPotter
     {
        
 
-        public string Name { get ; }    
+        public string PlantName { get ; }    
         public int Count { get ; }
 
         public Plants(string name, int count)
         {
-            Name = name;
+            PlantName = name;
             Count = count;
         }
     }
