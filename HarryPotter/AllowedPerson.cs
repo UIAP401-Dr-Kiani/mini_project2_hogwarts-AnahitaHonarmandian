@@ -13,22 +13,31 @@ namespace HarryPotter
 
         public int RoomNumber{ get  ;}
         public Pet Pet { get ; }       
-        //public Groups Group { get; }      
+         
         public bool HasBaggage { get; }
         public Role Role { get; }
 
         public List<Letter> ReceivedLetters { get; }
        
 
-       public AllowedPerson(int roomNumber, Pet pet, Groups group, bool hasBaggage, Role role)
+       public AllowedPerson(string firstName, string lastName, 
+           int birthyear, Gender gender, string fatherName,
+           string username, string password, RaceBlood race,
+           int roomNumber, Pet pet,  bool hasBaggage, Role role):
+            
+            base(firstName, lastName, birthyear,
+                gender, fatherName, username, password, race)
         {
             RoomNumber = roomNumber;
             Pet = pet;
-            Group = group;
             HasBaggage = hasBaggage;
             Role = role;
+            ReceivedLetters = new List<Letter>();
         }
 
-        public AllowedPerson() { }
+        public void AddToLetters (Letter letter)
+        {
+            ReceivedLetters.Add(letter);
+        }
     }
 }

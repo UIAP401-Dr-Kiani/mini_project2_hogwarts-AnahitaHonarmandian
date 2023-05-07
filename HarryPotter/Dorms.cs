@@ -15,7 +15,7 @@ namespace HarryPotter
         public int Floor { get ; }
         public int Room { get ; }
         public bool Gender { get ;  }
-        public int Bed { get ; }
+        public int BedCount { get ; }
 
         public static int Code { get; } //?????
 
@@ -25,7 +25,7 @@ namespace HarryPotter
             Floor = floor;
             Room = room;
             Gender = gender;
-            Bed = bed;
+            BedCount = bed;
         }
     }
 }

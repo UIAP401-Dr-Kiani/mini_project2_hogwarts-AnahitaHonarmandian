@@ -22,7 +22,7 @@ namespace HarryPotter
        
         public bool Gender { get; }
 
-        public Human Father { get; }
+        public string FatherName { get; }
       
         public string Username { get; }
         
@@ -50,7 +50,7 @@ namespace HarryPotter
             BirthYear = Math.Abs(birthyear);
 
             Gender = gender;
-            Father = father;
+            FatherName = father;
             Username = username;
             Password = password;
             Race = race;
