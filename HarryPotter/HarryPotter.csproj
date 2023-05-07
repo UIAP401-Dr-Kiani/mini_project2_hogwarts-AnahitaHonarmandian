@@ -44,10 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllowedPerson.cs" />
+    <Compile Include="Chemistry.cs" />
+    <Compile Include="Dorms.cs" />
     <Compile Include="Dumbledore.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Groups.cs" />
+    <Compile Include="Herbology.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="MagicHistory.cs" />
+    <Compile Include="PE.cs" />
+    <Compile Include="Plants.cs" />
+    <Compile Include="Subjects.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,9 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

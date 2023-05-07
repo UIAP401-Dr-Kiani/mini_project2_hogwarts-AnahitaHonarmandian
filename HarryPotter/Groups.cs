@@ -18,9 +18,10 @@ namespace HarryPotter
         public int Score{ get ;  }
         public Types Type { get ; }
 
-        public Groups()
+       public Groups(int score,Types type)
         {
-            Score = Score;
+            Score = score;
+            Type = type;
         }
     }
 }

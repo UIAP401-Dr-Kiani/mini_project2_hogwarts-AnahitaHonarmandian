@@ -17,6 +17,8 @@ namespace HarryPotter
         public bool Gender { get ;  }
         public int Bed { get ; }
 
+        public static int Code { get; } //?????
+
         public Dorms(Groups groups, int floor, int room, bool gender, int bed)
         {
             Groups = groups;

@@ -9,12 +9,11 @@ namespace HarryPotter
      class Dumbledore : AllowedPerson
     {
         
-
         public Dorms DormList { get ; }
 
-        public Dumbledore(Dorms DormList)
+        public Dumbledore(Dorms dormList)
         {
-            this.DormList = DormList;
+            DormList = dormList;
         }
 
 

@@ -9,25 +9,14 @@ namespace HarryPotter
 {
      class AllowedPerson : Human
     {
-       
-        
         //TODO- received letter and schedule
 
         public int RoomNumber{ get  ;}
-        public Pet Pet { get ; }
-        
-        public Groups Group
-        {
-            get ;
-        }
-        public Boolean HasBaggage
-        {
-            get ;
-        }
-        public Role Role
-        {
-            get ;
-        }
+        public Pet Pet { get ; }       
+        public Groups Group { get; }      
+        public bool HasBaggage { get; }
+        public Role Role { get; }
+       
 
        public AllowedPerson(int roomNumber, Pet pet, Groups group, bool hasBaggage, Role role)
         {

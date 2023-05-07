@@ -9,13 +9,12 @@ namespace HarryPotter
      class Plants : Subjects
     {
        
-
         public string PlantName { get ; }    
         public int Count { get ; }
 
-        public Plants(string name, int count)
+        public Plants(string plantName, int count) 
         {
-            PlantName = name;
+            PlantName = plantName;
             Count = count;
         }
     }
