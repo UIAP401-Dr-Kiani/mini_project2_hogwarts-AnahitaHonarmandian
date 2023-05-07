@@ -9,6 +9,11 @@ namespace HarryPotter
 {
     class Enums
     {
+        public enum Gender
+        {
+            MALE,
+            FEMALE
+        }
         public enum RaceBlood
         {
             HALF_BLOOD,

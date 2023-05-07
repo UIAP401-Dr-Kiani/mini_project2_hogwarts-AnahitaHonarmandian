@@ -9,13 +9,15 @@ namespace HarryPotter
 {
      class AllowedPerson : Human
     {
-        //TODO- received letter and schedule
+        //TODO- schedule
 
         public int RoomNumber{ get  ;}
         public Pet Pet { get ; }       
-        public Groups Group { get; }      
+        //public Groups Group { get; }      
         public bool HasBaggage { get; }
         public Role Role { get; }
+
+        public List<Letter> ReceivedLetters { get; }
        
 
        public AllowedPerson(int roomNumber, Pet pet, Groups group, bool hasBaggage, Role role)
