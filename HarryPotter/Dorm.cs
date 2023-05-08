@@ -7,7 +7,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    public class Dorms
+    public class Dorm
     {
        
         public Group Groups { get ; }
@@ -18,7 +18,7 @@ namespace HarryPotter
 
         //public static int Code { get; } //?????
 
-        public Dorms(Group groups, int floor, int room, Gender allowedGender, int bed)
+        public Dorm(Group groups, int floor, int room, Gender allowedGender, int bed)
         {
             Groups = groups;
             Floor = floor;

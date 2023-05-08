@@ -10,9 +10,9 @@ namespace HarryPotter
     public class Dumbledore : AllowedPerson
     {
         
-        public List<Dorms> DormList { get ; }
+        public List<Dorm> DormList { get ; }
 
-        public Dumbledore(List<Dorms> dormList):
+        public Dumbledore(List<Dorm> dormList):
              base("Albus", "Dumbledore", 1800,
             Enums.Gender.MALE, "Christopher",
             "Admin", "1", Enums.RaceBlood.PURE_BLOOD,

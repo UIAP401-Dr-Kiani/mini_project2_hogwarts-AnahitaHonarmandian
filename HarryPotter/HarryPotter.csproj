@@ -43,28 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllowedPerson.cs" />
-    <Compile Include="Chemicals.cs" />
-    <Compile Include="Chemistry.cs" />
-    <Compile Include="Dorms.cs" />
-    <Compile Include="Dumbledore.cs" />
+    <Compile Include="Role\AllowedPerson.cs" />
+    <Compile Include="Subjects\Chemicals.cs" />
+    <Compile Include="Subjects\Chemistry.cs" />
+    <Compile Include="Dorm.cs" />
+    <Compile Include="Role\Dumbledore.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Group.cs" />
-    <Compile Include="Herbology.cs" />
-    <Compile Include="Human.cs" />
+    <Compile Include="Subjects\Herbology.cs" />
+    <Compile Include="Role\Human.cs" />
     <Compile Include="Letter.cs" />
-    <Compile Include="MagicHistory.cs" />
-    <Compile Include="PhysicalEducation.cs" />
-    <Compile Include="Plants.cs" />
-    <Compile Include="Semester1.cs" />
-    <Compile Include="Semester2.cs" />
-    <Compile Include="Semester3.cs" />
-    <Compile Include="Spell.cs" />
-    <Compile Include="Subjects.cs" />
-    <Compile Include="Professor.cs" />
+    <Compile Include="Subjects\MagicHistory.cs" />
+    <Compile Include="Subjects\PhysicalEducation.cs" />
+    <Compile Include="Subjects\Plants.cs" />
+    <Compile Include="Subjects\Semester1.cs" />
+    <Compile Include="Subjects\Semester2.cs" />
+    <Compile Include="Subjects\Semester3.cs" />
+    <Compile Include="Subjects\Spell.cs" />
+    <Compile Include="Subjects\Subjects.cs" />
+    <Compile Include="Role\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Role\Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
