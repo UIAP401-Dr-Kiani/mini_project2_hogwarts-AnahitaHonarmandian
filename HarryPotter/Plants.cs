@@ -16,7 +16,7 @@ namespace HarryPotter
             base(name, capacity, semesterPresentation, minutesDuration)
         {
             PlantName = plantName;
-            Count = count;
+           IncreasePlant(count);
         }
 
         public void IncreasePlant(int value)

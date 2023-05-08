@@ -16,5 +16,10 @@ namespace HarryPotter
         {
             Spells=new List<Spell>();   
         }
+
+        public void AddNewMagic(Spell newMagic)
+        {
+            Spells.Add(newMagic);
+        }
     }
 }
