@@ -8,7 +8,13 @@ namespace HarryPotter
 {
      class Chemistry : Subjects
     {
-        // TODO-chemicals list
         public List<Chemicals> Chemicals { get; }
+
+        public Chemistry(string name, int capacity, uint semesterPresentation, uint minutesDuration):
+
+            base( name, capacity, semesterPresentation, minutesDuration)
+        {
+            Chemicals = new List<Chemicals>();  
+        }
     }
 }
