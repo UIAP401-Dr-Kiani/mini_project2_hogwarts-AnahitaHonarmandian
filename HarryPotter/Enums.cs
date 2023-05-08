@@ -7,7 +7,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    class Enums
+    public class Enums
     {
         public enum Gender
         {

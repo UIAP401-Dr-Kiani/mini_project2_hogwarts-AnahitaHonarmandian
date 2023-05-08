@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     class Plants : Subjects
+     public class Plants : Subjects
     {
        
         public string PlantName { get ; }    

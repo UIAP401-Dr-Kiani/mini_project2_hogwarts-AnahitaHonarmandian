@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Semester1
+    public class Semester1 : Herbology
     {
+        public Semester1(int capacity, uint semesterPresentation, uint minutesDuration) :
+            base("Semester1", capacity, semesterPresentation, new List<Plants>())
+        {
+
+        }
     }
 }

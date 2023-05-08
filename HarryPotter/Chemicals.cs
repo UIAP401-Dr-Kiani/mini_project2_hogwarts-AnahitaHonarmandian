@@ -8,5 +8,12 @@ namespace HarryPotter
 {
     internal class Chemicals
     {
+        public string Name { get; }
+         public string Formula { get; }
+
+        public Chemicals(string name,string formula) {
+            Name = name;
+            Formula = formula;
+        }
     }
 }

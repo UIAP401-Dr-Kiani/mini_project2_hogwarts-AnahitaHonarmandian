@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     class PE : Subjects
-        //Physical Education
+     class PhysicalEducation : Subjects
+        
     {
-        public string PeType { get ; }
+        public string ClassType { get ; }
 
-        public PE(string peType) 
+        public PhysicalEducation(string name, int capacity, uint semesterPresentation, uint minutesDuration,string classType)
+            :base( name, capacity, semesterPresentation, minutesDuration)
         {
-            PeType = peType;
+           ClassType = classType;
         }
     }
 }

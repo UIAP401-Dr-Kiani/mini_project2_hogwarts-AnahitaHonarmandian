@@ -7,7 +7,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-     class Dorms
+    public class Dorms
     {
        
         public Group Groups { get ; }

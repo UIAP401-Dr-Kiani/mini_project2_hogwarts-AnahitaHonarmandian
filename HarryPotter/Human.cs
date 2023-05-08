@@ -9,7 +9,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-     class Human
+    public class Human
     {
         
         public string FirstName { get; }

@@ -7,7 +7,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-     class AllowedPerson : Human
+    public class AllowedPerson : Human
     {
         //TODO- schedule
 

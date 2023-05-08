@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Letter
+    public class Letter
     {
         public Guid ID { get; }
         public string Title { get; }
