@@ -10,5 +10,6 @@ namespace HarryPotter
     //study of magical plants
     {
         //TODO - fields and properties
+
     }
 }

@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     class Chemistry : Subjects
+    internal class Chemicals
     {
-        // TODO-chemicals list
-        public List<Chemicals> Chemicals { get; }
     }
 }
