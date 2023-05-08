@@ -10,12 +10,25 @@ namespace HarryPotter
     {
        
         public string PlantName { get ; }    
-        public int Count { get ; }
+        public int Count { get; private set; }
 
-        public Plants(string plantName, int count) 
+        public Plants(string name, int capacity, uint semesterPresentation, uint minutesDuration,string plantName, int count) :
+            base(name, capacity, semesterPresentation, minutesDuration)
         {
             PlantName = plantName;
             Count = count;
+        }
+
+        public void IncreasePlant(int value)
+        {
+            Count += Math.Abs(value);
+        }
+        public void DecreasePlant()
+        {
+            if (Count > 0)
+            {
+                Count--;
+            }
         }
     }
 }
