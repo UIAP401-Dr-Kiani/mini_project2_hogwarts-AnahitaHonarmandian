@@ -10,7 +10,7 @@ namespace HarryPotter
      class Dorms
     {
        
-        public Groups Groups { get ; }
+        public Group Groups { get ; }
         public int Floor { get ; }
         public int Room { get ; }
         public Gender AllowedGender { get ;  }
@@ -18,7 +18,7 @@ namespace HarryPotter
 
         //public static int Code { get; } //?????
 
-        public Dorms(Groups groups, int floor, int room, Gender allowedGender, int bed)
+        public Dorms(Group groups, int floor, int room, Gender allowedGender, int bed)
         {
             Groups = groups;
             Floor = floor;

@@ -48,7 +48,7 @@
     <Compile Include="Dorms.cs" />
     <Compile Include="Dumbledore.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="Groups.cs" />
+    <Compile Include="Group.cs" />
     <Compile Include="Herbology.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Letter.cs" />
