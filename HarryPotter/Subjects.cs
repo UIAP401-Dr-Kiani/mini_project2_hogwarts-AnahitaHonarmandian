@@ -10,19 +10,27 @@ namespace HarryPotter
     {
 
         public string Name { get; }
-        public int NumberOfStudents { get; private set; }
         public int Capacity { get; }
-        public uint SemesterPresentation { get; set; }
-        public TimeSpan Time { get; }
+        public int NumberOfStudents { get; private set; }
+        public uint SemesterPresentation { get; }
+        public TimeSpan Time { get; set; }
 
-
-        public Subjects(string name, int capacity, uint semesterPresentation, uint minutesDuration)
+        public Subjects(string name, int capacity, uint semesterPresentation, uint minuteDruration)
         {
-            NumberOfStudents = 0;
-            Capacity = capacity;
-            SemesterPresentation = semesterPresentation;
             Name = name;
-            Time = TimeSpan.FromMinutes(minutesDuration);
+            Capacity = capacity;
+            NumberOfStudents = 0;
+            SemesterPresentation = semesterPresentation;
+            Time = TimeSpan.FromMinutes(minuteDruration);
+        }
+
+        public void IncreaseStudent()
+        {
+            NumberOfStudents++;
+        }
+        public bool CanSignUp()
+        {
+            return Capacity - NumberOfStudents > 0;
         }
 
 

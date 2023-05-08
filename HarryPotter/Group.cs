@@ -8,7 +8,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-     class Group
+    public class Group
     {
       
         public List<Student> Students { get; }

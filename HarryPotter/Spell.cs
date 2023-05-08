@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal class Spell
+    public class Spell
     {
         public string Name { get; private set; }
         public string Content { get; private set; }

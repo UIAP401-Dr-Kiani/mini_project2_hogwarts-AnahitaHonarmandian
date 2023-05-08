@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     class PhysicalEducation : Subjects
+    public class PhysicalEducation : Subjects
         
     {
         public string ClassType { get ; }
