@@ -51,6 +51,7 @@
     <Compile Include="Groups.cs" />
     <Compile Include="Herbology.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="Letter.cs" />
     <Compile Include="MagicHistory.cs" />
     <Compile Include="PE.cs" />
     <Compile Include="Plants.cs" />

@@ -42,15 +42,13 @@ namespace HarryPotter
             Password = "1";
         }
 
-        public Human(string firstName, string lastName, int birthyear, bool gender, Human father, string username, string password, RaceBlood race)
+        public Human(string firstName, string lastName, int birthyear, Gender gender, string fatherName, string username, string password, RaceBlood race)
         {
             FirstName = string.IsNullOrEmpty(firstName) ? "No Name" : firstName;
-
             LastName = lastName;
             BirthYear = Math.Abs(birthyear);
-
-            Gender = gender;
-            FatherName = father;
+            Gender = gender == Enums.Gender.FEMALE ? false : true;
+            FatherName = fatherName;
             Username = username;
             Password = password;
             Race = race;

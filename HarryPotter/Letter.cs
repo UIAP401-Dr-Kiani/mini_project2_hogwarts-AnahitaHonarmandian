@@ -25,11 +25,13 @@ namespace HarryPotter
 
         }
 
-       Letter(Guid Id, string title, string receiver, string context, DateTime WriteDateTime) 
+       Letter(Guid Id, string title, string receiver, string context, DateTime writeDateTime) 
         { 
-            Id=Id;
+            ID=Id;
             Title=title;
             Receiver=receiver;
+            Context=context;
+            WriteDateTime = writeDateTime;
         }
     }
 }
