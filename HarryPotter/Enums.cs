@@ -38,7 +38,18 @@ namespace HarryPotter
             RAVENCLAW,
             SLYTHERIN
         }
-        
-        
+
+        public enum SpellTypes
+        {
+            CHARM,
+            CURSE,
+            TRANSFIGURATION,
+            HEALING,
+            JINX,
+            HEX,
+            COUNTER_SPELLS
+        }
+
+
     }
 }

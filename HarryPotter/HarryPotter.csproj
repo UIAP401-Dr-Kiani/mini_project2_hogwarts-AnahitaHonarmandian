@@ -55,6 +55,7 @@
     <Compile Include="MagicHistory.cs" />
     <Compile Include="PE.cs" />
     <Compile Include="Plants.cs" />
+    <Compile Include="Spell.cs" />
     <Compile Include="Subjects.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Program.cs" />

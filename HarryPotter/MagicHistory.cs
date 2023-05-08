@@ -11,11 +11,11 @@ namespace HarryPotter
        
         //TODO-CHARMS
 
-        public List<MagicHistory> Charms { get ; }
+        public List<Spell> Spells { get ; }
 
-        public MagicHistory(List<MagicHistory> charms)
+        public MagicHistory(List<Spell> spells)
         {
-            Charms = charms;
+            Spells = spells;
         }
     }
 }
