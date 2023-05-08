@@ -9,13 +9,12 @@ namespace HarryPotter
      class MagicHistory : Subjects
     {
        
-        //TODO-CHARMS
-
         public List<Spell> Spells { get ; }
 
-        public MagicHistory(List<Spell> spells)
+        public MagicHistory(string name, int capacity, uint semesterPresentation, uint minutesDuration):
+            base( name,  capacity,  semesterPresentation,  minutesDuration)
         {
-            Spells = spells;
+            Spells=new List<Spell>();   
         }
     }
 }

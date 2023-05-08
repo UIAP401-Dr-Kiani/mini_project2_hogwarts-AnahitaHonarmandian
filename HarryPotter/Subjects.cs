@@ -8,25 +8,25 @@ namespace HarryPotter
 {
      class Subjects
     {
+
+        public string Name { get; }
+        public int NumberOfStudents { get; private set; }
+        public int Capacity { get ; }
+        public uint SemesterPresentation { get; set; }
+        public TimeSpan Time { get; }
         
 
-        //TODO-time
-
-        public int NumberOfStudents { get; }
-        public int Capacity { get ; }
-        public uint SemesterPresentation { get ; }
-        public string Name { get ; }
-
-        public Subjects(int numberOfStudents, int capacity, uint semesterPresentation, string name)
+        public Subjects(string name, int capacity, uint semesterPresentation, uint minutesDuration )
         {
-            NumberOfStudents = numberOfStudents;
+            NumberOfStudents = 0;
             Capacity = capacity;
             SemesterPresentation = semesterPresentation;
             Name = name;
+            Time= TimeSpan.FromMinutes( minutesDuration );
         }
 
 
 
-        public Subjects() { }
+        
     }
 }
