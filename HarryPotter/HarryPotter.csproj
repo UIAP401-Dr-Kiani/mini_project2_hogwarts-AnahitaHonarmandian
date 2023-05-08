@@ -53,7 +53,7 @@
     <Compile Include="Human.cs" />
     <Compile Include="Letter.cs" />
     <Compile Include="MagicHistory.cs" />
-    <Compile Include="PE.cs" />
+    <Compile Include="PhysicalEducation.cs" />
     <Compile Include="Plants.cs" />
     <Compile Include="Spell.cs" />
     <Compile Include="Subjects.cs" />
