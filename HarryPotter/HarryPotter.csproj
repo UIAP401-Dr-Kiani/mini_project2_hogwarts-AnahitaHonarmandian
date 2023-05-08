@@ -56,6 +56,9 @@
     <Compile Include="MagicHistory.cs" />
     <Compile Include="PhysicalEducation.cs" />
     <Compile Include="Plants.cs" />
+    <Compile Include="Semester1.cs" />
+    <Compile Include="Semester2.cs" />
+    <Compile Include="Semester3.cs" />
     <Compile Include="Spell.cs" />
     <Compile Include="Subjects.cs" />
     <Compile Include="Professor.cs" />
