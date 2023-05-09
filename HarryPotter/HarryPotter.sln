@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33417.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotter", "HarryPotter.csproj", "{5AF00DEC-5F1F-4243-A5E4-DEF5436526BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkHandler", "..\WorkHandler\WorkHandler.csproj", "{16B2DA48-C0DB-4307-99FF-43A72ED52093}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AF00DEC-5F1F-4243-A5E4-DEF5436526BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF00DEC-5F1F-4243-A5E4-DEF5436526BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AF00DEC-5F1F-4243-A5E4-DEF5436526BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B2DA48-C0DB-4307-99FF-43A72ED52093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B2DA48-C0DB-4307-99FF-43A72ED52093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B2DA48-C0DB-4307-99FF-43A72ED52093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B2DA48-C0DB-4307-99FF-43A72ED52093}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
