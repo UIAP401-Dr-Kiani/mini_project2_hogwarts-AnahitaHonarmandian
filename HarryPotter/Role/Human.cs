@@ -9,7 +9,7 @@ using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    public class Human
+    public class Human : IFileWorker<Human>
     {
         
         public string FirstName { get; }
@@ -29,6 +29,8 @@ namespace HarryPotter
         public string Password { get; }
        
         public RaceBlood Race { get; }
+
+        public string FileName { }
      
 
         public Human()
