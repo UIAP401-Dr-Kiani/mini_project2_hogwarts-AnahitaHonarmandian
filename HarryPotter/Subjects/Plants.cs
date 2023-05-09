@@ -8,15 +8,14 @@ namespace HarryPotter
 {
      public class Plants : Subjects
     {
-       
-        public string PlantName { get ; }    
+
+        public string PlantName { get; }
         public int Count { get; private set; }
 
-        public Plants(string name, int capacity, uint semesterPresentation, uint minutesDuration,string plantName, int count) :
-            base(name, capacity, semesterPresentation, minutesDuration)
+        public Plants(string plantName, int count)
         {
             PlantName = plantName;
-           IncreasePlant(count);
+            IncreasePlant(count);
         }
 
         public void IncreasePlant(int value)
@@ -29,6 +28,11 @@ namespace HarryPotter
             {
                 Count--;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"{PlantName} - #{Count}";
         }
     }
 }

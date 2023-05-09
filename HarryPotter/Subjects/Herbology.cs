@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     public class Herbology : Subjects
+     public abstract class Herbology : Subjects
     
     {
         public abstract List<Plants> PlantsList();
@@ -18,8 +18,8 @@ namespace HarryPotter
 
         public override string ToString()
         {
-            var herbology_info = $"Name: {Name} Capicity: {Capacity} {SemesterPresentation} {Time.ToString("c")}\n";
-            var plants = "Subject Plantest:\n";
+            var herbology_info = $"Name: {Name} Capacity: {Capacity} {SemesterPresentation} {Time.ToString("c")}\n";
+            var plants = "Subject Plants:\n";
             foreach (var plant in PlantsList())
             {
                 plants += (plant.ToString() + "\n");
