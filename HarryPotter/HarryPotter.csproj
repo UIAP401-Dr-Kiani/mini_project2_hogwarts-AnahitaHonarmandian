@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFileWorker.cs" />
     <Compile Include="Role\AllowedPerson.cs" />
     <Compile Include="Subjects\Chemicals.cs" />
     <Compile Include="Subjects\Chemistry.cs" />
