@@ -60,6 +60,7 @@
     <Compile Include="Subjects\Semester1.cs" />
     <Compile Include="Subjects\Semester2.cs" />
     <Compile Include="Subjects\Semester3.cs" />
+    <Compile Include="Subjects\Semester4.cs" />
     <Compile Include="Subjects\Spell.cs" />
     <Compile Include="Subjects\Subjects.cs" />
     <Compile Include="Role\Professor.cs" />
