@@ -1,0 +1,3 @@
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.AssemblyReference.cache
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.SuggestedBindingRedirects.cache
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.CoreCompileInputs.cache

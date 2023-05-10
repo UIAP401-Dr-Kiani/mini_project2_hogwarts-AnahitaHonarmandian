@@ -20,6 +20,10 @@ namespace HarryPotter
             Content = content;
             SpellType = spellType;
         }
+        public override string ToString()
+        {
+            return $"Name:{Name}-Content:{Content}-Spell Type:{SpellType}";
+        }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     public abstract class Herbology : Subjects
+     public abstract class Herbology : Subject
     
     {
         public abstract List<Plants> PlantsList();

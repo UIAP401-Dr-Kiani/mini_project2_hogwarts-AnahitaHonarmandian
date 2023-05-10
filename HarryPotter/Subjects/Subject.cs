@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    public class Subjects
+    public class Subject
     {
 
         public string Name { get; }
@@ -15,13 +15,13 @@ namespace HarryPotter
         public uint SemesterPresentation { get; }
         public TimeSpan Time { get; set; }
 
-        public Subjects(string name, int capacity, uint semesterPresentation, uint minuteDruration)
+        public Subject(string name, int capacity, uint semesterPresentation, uint minuteDuration)
         {
             Name = name;
             Capacity = capacity;
             NumberOfStudents = 0;
             SemesterPresentation = semesterPresentation;
-            Time = TimeSpan.FromMinutes(minuteDruration);
+            Time = TimeSpan.FromMinutes(minuteDuration);
         }
 
         public void IncreaseStudent()
@@ -32,6 +32,8 @@ namespace HarryPotter
         {
             return Capacity - NumberOfStudents > 0;
         }
+
+        
 
 
 

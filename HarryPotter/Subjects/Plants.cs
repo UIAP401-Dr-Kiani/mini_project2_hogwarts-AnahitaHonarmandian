@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-     public class Plants : Subjects
+     public class Plants 
     {
 
         public string PlantName { get; }
         public int Count { get; private set; }
 
         public Plants(string plantName, int count)
+          
         {
             PlantName = plantName;
             IncreasePlant(count);
@@ -32,7 +33,7 @@ namespace HarryPotter
 
         public override string ToString()
         {
-            return $"{PlantName} - #{Count}";
+            return $"Name:{PlantName} - #{Count}";
         }
     }
 }

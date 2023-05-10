@@ -17,7 +17,7 @@ namespace HarryPotter
 
 
         public Student(
-            string firstName, string lastName, int birthyear, Gender gender, string father, string username,
+            string firstName, string lastName, int birthyear, GenderType gender, string father, string username,
             string password, RaceBlood race, int roomNumber, Pet pet, Group group, bool hasBaggage, Role role,
             int passedCourses, int semester, int dormNumber) :
 

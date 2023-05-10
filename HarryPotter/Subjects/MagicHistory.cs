@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    public class MagicHistory : Subjects
+    public class MagicHistory : Subject
     {
        
         public List<Spell> Spells { get ; }

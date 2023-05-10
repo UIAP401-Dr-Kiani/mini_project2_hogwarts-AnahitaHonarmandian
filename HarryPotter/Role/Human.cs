@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static HarryPotter.Enums;
 
 
+
 namespace HarryPotter
 {
     public class Human : IFileWorker<Human>
@@ -20,7 +21,7 @@ namespace HarryPotter
        
         public int BirthYear { get; }
        
-        public bool Gender { get; }
+        public GenderType Gender { get; }
 
         public string FatherName { get; }
       
@@ -30,30 +31,65 @@ namespace HarryPotter
        
         public RaceBlood Race { get; }
 
-        public string FileName { }
+        public string FileName { get => "Human.txt"; }
      
 
-        public Human()
-        {
-            FirstName = "";
-            LastName = "";
-            BirthYear = 0;
-            Gender = true;
-            //Father = new Person();
-            Username = "Admin";
-            Password = "1";
-        }
 
-        public Human(string firstName, string lastName, int birthyear, Gender gender, string fatherName, string username, string password, RaceBlood race)
+        public Human(string firstName, string lastName, int birthyear, GenderType gender, string fatherName, string username, string password, RaceBlood race)
         {
             FirstName = string.IsNullOrEmpty(firstName) ? "No Name" : firstName;
             LastName = lastName;
             BirthYear = Math.Abs(birthyear);
-            Gender = gender == Enums.Gender.FEMALE ? false : true;
+            Gender = gender;
             FatherName = fatherName;
             Username = username;
             Password = password;
             Race = race;
+        }
+
+        public List<Human> GetFromFile()
+        {
+            var humans = new List<Human>();
+            var list_temp = FileWorker.Read(FileName);
+
+            foreach (List<string> person_info in list_temp)
+            {
+                string firstName = person_info[0];
+                string lastName = person_info[1];
+                int birthyear = int.Parse(person_info[2]);
+                Enum.TryParse(person_info[3], out GenderType gender);
+                var fatherName = person_info[4];
+                var username = person_info[5];
+                var password = person_info[6];
+                Enum.TryParse(person_info[7], out RaceBlood race);
+
+                humans.Add(new Human(firstName, lastName, birthyear, gender, fatherName, username, password, race));
+            }
+            return humans;
+        }
+        bool isEqual(Human human)
+        {
+            return human.FirstName == this.FirstName && human.LastName == this.LastName && human.FatherName == this.FatherName;
+        }
+        bool IsDuplicate()
+        {
+            foreach (var human in GetFromFile())
+            {
+                if (isEqual(human))
+                    return true;
+            }
+
+            return false;
+        }
+        public void WriteToFile()
+        {
+            if (!IsDuplicate())
+                FileWorker.Write(FileName, ReadyToWrite());
+        }
+
+        public string ReadyToWrite()
+        {
+            return $"{FirstName}|{LastName}|{BirthYear}|{Gender}|{FatherName}|{Username}|{Password}|{Race}";
         }
 
     }
