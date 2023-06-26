@@ -8,7 +8,7 @@ namespace HarryPotter.Panels
 {
     public class FirstPanel
     {
-        public void Panel1(/*int student_id*/) 
+        public void Panel1() 
         {
             while (true)
             {
