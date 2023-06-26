@@ -13,6 +13,9 @@ namespace HarryPotter
     {
         public int AllowedPersonID { get; set; }
         public int RoomNumber { get; }
+        public string Schedule { get; }
+        
+        //public Group Group { get; }
         public bool HasBaggage { get; }
         public Pet Pet { get; }
         public Role Role { get; }

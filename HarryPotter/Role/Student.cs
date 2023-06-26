@@ -52,10 +52,10 @@ namespace HarryPotter
         public void SelectCourses()
         {
             Console.WriteLine(@"Available Courses are:
-1.Magic History => Professor Snape
-2.Chemistry => Professor Sybil
-3.Herbology => Professor Sybil
-4.Physical Education => Professor Burbage");
+                                1.Magic History => Professor Snape
+                                2.Chemistry => Professor Sybil
+                                3.Herbology => Professor Sybil
+                                4.Physical Education => Professor Burbage");
             
             var course_name = Console.ReadLine().Trim();
 

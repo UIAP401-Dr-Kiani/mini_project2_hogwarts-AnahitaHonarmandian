@@ -106,7 +106,7 @@ namespace HarryPotter.FileHandler
             }
             return subject;
         }
-        public static List<Professor> GetProffesors()
+        public static List<Professor> GetProfessors()
         {
             var professors = new List<Professor>();
             var list_temp = FileWorker.Read(PROFESSOR_FILE_NAME);

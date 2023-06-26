@@ -71,7 +71,7 @@ namespace HarryPotter
         }
         bool IsDuplicate()
         {
-            foreach (var professor in FileReader.GetProffesors())
+            foreach (var professor in FileReader.GetProfessors())
             {
                 if (isEqual(professor))
                     return true;

@@ -1,1 +1,2 @@
-﻿
+﻿Ana, Honar, 1999, FEMALE, ali, ab, cd, MUGGLE_BLOOD,1,CAT,STUDENT,20,10,40,1001
+Sara,sadeghi,2000,FEMALE, aki, a,a,HALF_BLOOD , 1,OWL,STUDENT,20,10,40,1002

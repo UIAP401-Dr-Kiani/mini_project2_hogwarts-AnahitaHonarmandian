@@ -28,7 +28,7 @@ namespace HarryPotter
         }
 
 
-        bool isEqual(Group group)
+        bool IsEqual(Group group)
         {
             return group.Score == this.Score && group.Type == this.Type;
         }
@@ -36,7 +36,7 @@ namespace HarryPotter
         {
             foreach (var group in FileReader.GetGroups())
             {
-                if (isEqual(group))
+                if (IsEqual(group))
                     return true;
             }
 

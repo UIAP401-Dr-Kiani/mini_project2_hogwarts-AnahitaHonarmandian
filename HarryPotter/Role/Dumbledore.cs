@@ -22,12 +22,10 @@ namespace HarryPotter
             Letters = new List<Letter>();
         }
 
-        public static void SendLetter(/*string StudentID*/)
+        public static void SendLetter()
         {
 
-            //            Console.WriteLine(@"Whom do you want to send letter to?
-            //student id:");
-            //            student_id = Convert.ToInt32(Console.ReadLine());
+          
             Console.WriteLine("Title: ");
             string title = Console.ReadLine();
 
@@ -60,8 +58,8 @@ namespace HarryPotter
 
             }
 
-            if (student != null)
-            {
+            //if (student != null)
+            //{
 
 
                 student.AddToLetters(letter);
@@ -74,7 +72,7 @@ namespace HarryPotter
 
 
 
-            }
+            //}
         }
 
         public void ReceivedLetters(Letter letter)
