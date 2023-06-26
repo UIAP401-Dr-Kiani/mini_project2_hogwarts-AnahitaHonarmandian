@@ -17,8 +17,8 @@ namespace HarryPotter
             Human.GetFromFile();
 
             FirstPanel firstPanel = new FirstPanel();
-            int student_id = 0;
-            firstPanel.Panel1(student_id);
+            //int student_id = 0;
+            firstPanel.Panel1();
         }
     }
 }
