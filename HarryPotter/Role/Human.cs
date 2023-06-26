@@ -41,15 +41,15 @@ namespace HarryPotter
             var humans = new List<Student>();
 
             const Int32 BufferSize = 128;
-            using (var fileStream = File.OpenRead(@"C:\Users\1377t\Downloads\Telegram Desktop\HarryPotter\files\human.txt"))
+            using (var fileStream = File.OpenRead(@"C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\Filetxt\Human.txt"))
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
             {
                 String line;
                 while ((line = streamReader.ReadLine()) != null)
                 {
-                    //Console.WriteLine(line);
+                   
                     string[] person_info = line.Split(',');
-                    //Console.WriteLine(parts[0]);
+                   
 
                     string firstName = person_info[0];
                     string lastName = person_info[1];

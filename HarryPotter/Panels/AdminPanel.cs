@@ -8,7 +8,7 @@ namespace HarryPotter.Panels
 {
     internal class AdminPanel
     {
-        public void AdminPanel1(int student_id)
+        public void AdminPanel1()
         {
             while (true)
             {
@@ -21,7 +21,7 @@ namespace HarryPotter.Panels
                 if (x == 1)
                 {
                 
-                    Dumbledore.SendLetter(student_id);
+                    Dumbledore.SendLetter();
                     
                 }
               

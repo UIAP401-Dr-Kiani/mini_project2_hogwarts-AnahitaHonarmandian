@@ -1,4 +1,5 @@
-﻿using HarryPotter.Subjects;
+﻿using HarryPotter.DataBase;
+using HarryPotter.Subjects;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,7 +23,7 @@ namespace HarryPotter.Panels
             Console.WriteLine("Enter 1 if you're not a wizard:");
             int raceBlood = Convert.ToInt32(Console.ReadLine());
              Console.WriteLine("ID:");
-            int id = Convert.ToInt32(Console.ReadLine());
+            int StudentID = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Semester:");
             int sem = Convert.ToInt32(Console.ReadLine());
             Student std1 = new Student(firstName, lastName, 0, GenderType.MALE, "", "",
@@ -42,7 +43,21 @@ namespace HarryPotter.Panels
                 {
                     Console.WriteLine(@"1.check mail box:");
                     Console.ReadLine();
+                    Console.WriteLine("Enter your id again : ");
+                    string username = Console.ReadLine();
 
+
+                    foreach (var item in Tables.Students)
+                    {
+                        if (username.Equals(item.StudentID))
+                        {
+                            foreach (var j in item.ReceivedLetters)
+                            {
+                                Console.WriteLine(j.Context);
+                            }
+
+                        }
+                    }
 
                     Console.WriteLine($"Dear {firstName} {lastName}; Welcome to Hogwarts.");
                     Console.WriteLine("Press any key to start your journey!!");

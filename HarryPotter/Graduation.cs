@@ -31,10 +31,10 @@ namespace HarryPotter
             Score = score;
         }
 
-        public bool IsAccepted()
+        public void IsConfirmed()
         {
-            return Score > 0;
-            Console.WriteLine("Done");
+            Console.WriteLine("Grades were confirmed successfully");
+            
         }
 
         public override string ToString()

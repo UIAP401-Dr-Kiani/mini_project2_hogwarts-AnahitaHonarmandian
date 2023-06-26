@@ -9,7 +9,6 @@ namespace HarryPotter
 {
     public class Student : AllowedPerson
     {
-        //private string id;
 
         public string StudentID { get; set; }
         public int PassedUnitCourses { get; private set; }
@@ -57,8 +56,33 @@ namespace HarryPotter
 2.Chemistry => Professor Sybil
 3.Herbology => Professor Sybil
 4.Physical Education => Professor Burbage");
-            Console.ReadLine();
+            
+            var course_name = Console.ReadLine().Trim();
+
+            if (course_name == "1")
+            {
+                MagicHistory magic = new MagicHistory("Dark arts", 100, 10, 20, 30);
+               
+            }
+            else if (course_name == "2")
+            {
+                Chemistry chemistry = new Chemistry("Chemistry", 10, 10, 10, 20);
+               
+
+            }
+            else if (course_name == "3")
+            {
+                Plants plants = new Plants("Violet", 100);
+
+            }
+            else if (course_name == "4")
+            {
+                PhysicalEducation p = new PhysicalEducation("Quidditch", 100, 10, 20, "A", 9);
+
+            }
             Console.WriteLine("Courses were added to your schedule");
+
+            
 
         }
 

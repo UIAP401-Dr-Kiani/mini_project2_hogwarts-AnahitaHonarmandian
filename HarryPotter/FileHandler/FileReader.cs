@@ -124,7 +124,7 @@ namespace HarryPotter.FileHandler
             return professors;
         }
 
-        #region Subjects Type
+      
         private const string CHEMICAL_FILE_NAME = "Chemical.txt";
         public static List<Chemicals> GetChemicals()
         {
@@ -141,7 +141,7 @@ namespace HarryPotter.FileHandler
             return chemicals;
         }
 
-        #endregion
+        
 
     }
 }

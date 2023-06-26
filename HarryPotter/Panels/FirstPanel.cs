@@ -27,7 +27,7 @@ namespace HarryPotter.Panels
                     if (s == "admin")
                     {
                         AdminPanel f=new AdminPanel();
-                        f.AdminPanel1(student_id);
+                        f.AdminPanel1();
                     }
 
                 }

@@ -8,7 +8,7 @@ namespace HarryPotter.Panels
 {
     public class ProfessorPanel
     {
-        public void ProfessorPanel1(/*string[] patients*/)
+        public void ProfessorPanel1()
         {
             while (true)
             {
@@ -37,7 +37,7 @@ namespace HarryPotter.Panels
                     int professorId = Convert.ToInt32(Console.ReadLine());
 
                     Graduation g = new Graduation(subjectId, studentId, professorId);
-                    g.IsAccepted();
+                    g.IsConfirmed();
 
 
                 }

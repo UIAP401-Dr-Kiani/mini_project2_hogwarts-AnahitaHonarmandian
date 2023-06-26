@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 
 namespace HarryPotter
 {
@@ -9,10 +10,8 @@ namespace HarryPotter
     {
         public List<Dorm> DormList { get; }
         public List<Letter> Letters { get; private set; }
+        public List<Student> Students { get; private set; }
 
-        //public List<Student> Students { get; private set; }
-
-        public List<string> Students { get; private set; }
         public Dumbledore(List<Dorm> dormList) :
              base("Albus", "Dumbledore", 1800,
             Enums.GenderType.MALE, "Christopher",
@@ -23,15 +22,59 @@ namespace HarryPotter
             Letters = new List<Letter>();
         }
 
-        public static void SendLetter(int student_id)
+        public static void SendLetter(/*string StudentID*/)
         {
-            
-            Console.WriteLine(@"Whom do you want to send letter to?
-student id:");
-            student_id = Convert.ToInt32(Console.ReadLine());
+
+            //            Console.WriteLine(@"Whom do you want to send letter to?
+            //student id:");
+            //            student_id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Title: ");
+            string title = Console.ReadLine();
+
+
+            Console.WriteLine("Context: ");
+            string context = Console.ReadLine();
+
+
+            foreach (var item in Tables.Students)
+            {
+                Console.WriteLine(item.FirstName + " " + item.StudentID);
+            }
+            Console.WriteLine("Enter student id:");
+            string StudentID = Console.ReadLine();
+
+
+            var letter = new Letter(title, StudentID, context);
+            Tables.Letters.Add(letter);
+
+          
+            Student student = null;
+            foreach (var item in Tables.Students)
+            {
+                if (item.StudentID.Equals(StudentID))
+                {
+
+                    student = item;
+                    break;
+                }
+
+            }
+
+            if (student != null)
+            {
+
+
+                student.AddToLetters(letter);
+                Random gen = new Random();
+                int range = 365 / 12;
+                DateTime moveDatetime = DateTime.Today.AddDays(gen.Next(range));
+                TrainTicket trainTicket = new TrainTicket("Home", "Hogwarts", moveDatetime);
+
+                Console.WriteLine("Letter was sent with their train ticket");
 
 
 
+            }
         }
 
         public void ReceivedLetters(Letter letter)
