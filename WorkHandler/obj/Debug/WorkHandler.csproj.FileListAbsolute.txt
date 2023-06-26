@@ -1,0 +1,6 @@
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\bin\Debug\WorkHandler.dll
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\bin\Debug\WorkHandler.pdb
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\obj\Debug\WorkHandler.csproj.AssemblyReference.cache
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\obj\Debug\WorkHandler.csproj.CoreCompileInputs.cache
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\obj\Debug\WorkHandler.dll
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\WorkHandler\obj\Debug\WorkHandler.pdb

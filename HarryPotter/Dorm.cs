@@ -1,67 +1,57 @@
-﻿using System;
+﻿using HarryPotter.FileHandler;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorkHandler;
 using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    public class Dorm : IFileWorker<Dorm>
+    public class Dorm 
     {
-       
-        public Group Groups { get ; }
-        public int Floor { get ; }
-        public int Room { get ; }
-        public GenderType AllowedGender { get ;  }
-        public int BedCount { get ; }
 
+        public int ID { get; set; }
+        public string GroupID { get; }
+        public int Floor { get; }
+        public int Room { get; }
+        public int BedCount { get; }
         public string FileName { get => "Dorm"; }
-      
-        
+        public GenderType AllowedGender { get; }
 
 
-
-        //public static int Code { get; } //?????
-
-        public Dorm(Group groups, int floor, int room, GenderType allowedGender, int bed)
+        public Dorm(string groupId, int floor, int room, GenderType allowedGender, int bed)
+            : this(new Random().Next(), groupId, floor, room, allowedGender, bed)
         {
-            Groups = groups;
+            GroupID = groupId;
             Floor = floor;
             Room = room;
             AllowedGender = allowedGender;
             BedCount = bed;
         }
 
-        public List<Dorm> GetFromFile()
+        public Dorm(int id, string groupId, int floor, int room, GenderType allowedGender, int bed)
         {
-            var dorms = new List<Dorm>();
-            var list_temp = FileWorker.Read(FileName);
-
-            foreach (List<string> dorm_info in list_temp)
-            {
-
-                var group = dorm_info[0];
-                int floor = int.Parse(dorm_info[1]);
-                int room = int.Parse(dorm_info[2]);
-                Enum.TryParse(dorm_info[3], out GenderType gender);
-                int bedCount= int.Parse(dorm_info[4]);
-
-                dorms.Add(new Dorm(group,floor,room,gender,bedCount));
-            }
-            return dorms;
+            ID = id;
+            GroupID = groupId;
+            Floor = floor;
+            Room = room;
+            AllowedGender = allowedGender;
+            BedCount = bed;
         }
-        bool isEqual(Dorm dorm)
+
+        bool IsEqual(Dorm dorm)
         {
-            return dorm.Groups == this.Groups && dorm.Floor == this.Floor && dorm.Room == this.Room;
+            return dorm.GroupID == this.GroupID && dorm.Floor == this.Floor && dorm.Room == this.Room;
         }
         bool IsDuplicate()
         {
-            foreach (var dorm in GetFromFile())
+            foreach (var dorm in FileReader.GetDorms())
             {
-                if (isEqual(dorm))
+                if (IsEqual(dorm))
                     return true;
             }
 
@@ -75,7 +65,7 @@ namespace HarryPotter
 
         public string ReadyToWrite()
         {
-            return $"{Groups}|{Floor}|{Room }|{AllowedGender}|{BedCount}";
+            return $"{ID}|{GroupID}|{Floor}|{Room}|{AllowedGender}|{BedCount}";
         }
 
     }

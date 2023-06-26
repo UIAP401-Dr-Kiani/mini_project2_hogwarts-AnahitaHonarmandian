@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace HarryPotter
 {
-    internal interface IFileWorker<T>
+    internal interface IFileWorker
     {
-        string FileName { get; }
-
-        List<T> GetFromFile();
-        void WriteToFile();
-        string ReadyToWrite();
+        string ConvertToStringFile();
     }
+
 }

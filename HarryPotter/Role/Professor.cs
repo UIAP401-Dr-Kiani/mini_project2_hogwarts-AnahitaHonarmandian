@@ -1,55 +1,77 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using static HarryPotter.Enums;
+using WorkHandler;
+
+using System.Linq;
+using HarryPotter.FileHandler;
+using System;
+using HarryPotter.DataBase;
 
 namespace HarryPotter
 {
     public class Professor : AllowedPerson
     {
-        public Group Groups { get; }
-        public bool SimultaneousTeaching { get ; }
-
+        public int ProfessorID { get; set; }
+        public int GroupID { get; }
+        public bool SimultaneousTeaching { get; }
         public new string FileName { get => "Professor.txt"; }
+        public static AllowedPerson GetAllowedPerson(int allowedPersonID) =>
+            Tables.AllowedPersons.FirstOrDefault(p => p.AllowedPersonID == allowedPersonID);
 
-        public Professor(string firstName, string lastName, int birthyear, GenderType gender, string fatherName,
-           string username, string password, RaceBlood race,
-           int roomNumber, Pet pet, bool hasBaggage, Role role,bool simultaneousTeaching,Group group) :
+        public Group GetGroup() =>
+            Tables
+            .Groups
+            .FirstOrDefault(g => g.ID == GroupID);
 
-            base( firstName,  lastName, birthyear, gender, fatherName, username, password, race,
-            roomNumber, pet, hasBaggage, role)
-        { 
-           SimultaneousTeaching = simultaneousTeaching;
-            Groups = group;
+        public IEnumerable<Subject> GetPresentedCourses() =>
+            Tables.Subjects.Where(s => s.ProfessorID == ProfessorID);
+        public Professor(AllowedPerson allowedPerson, int professorId, bool simultaneousTeaching, int groupid) :
 
-        }
-        public List<Professor> GetFromFile()
+            base(GetHuman(allowedPerson.Username), allowedPerson.AllowedPersonID,
+                allowedPerson.RoomNumber, allowedPerson.HasBaggage, allowedPerson.Pet, allowedPerson.Role)
         {
-            var Professor = new List<Professor>();
-            var list_temp = FileWorker.Read(FileName);
+            ProfessorID = professorId;
+            SimultaneousTeaching = simultaneousTeaching;
+            GroupID = groupid;
+        }
 
-            foreach (List<string> person_info in list_temp)
-            {
+        public Professor(int id, string firstName, string lastName,
+                         int birthyear, GenderType gender, string fatherName,
+                         string username, string password, RaceBlood race,
+                         int roomNumber, Pet pet, bool hasBaggage, Role role,
+                         bool simultaneousTeaching, int groupid) :
 
-                var firstName = person_info[0];
-                var lastName = person_info[1];
-                Enum.TryParse(person_info[2], out Group groups);
-                var simultaneousTeaching = person_info[3];
-               
+            base(firstName, lastName, birthyear, gender,
+                 fatherName, username, password, race,
+                 roomNumber, pet, hasBaggage, role)
+        {
+            ProfessorID = id;
+            SimultaneousTeaching = simultaneousTeaching;
+            GroupID = groupid;
+        }
 
-                Professor.Add(new Professor(firstName,lastName, groups,simultaneousTeaching)); ;
-            }
-            return Professor;
+        void AddNewCourse(Subject subject)
+        {
+            if (subject == null)
+                throw new ArgumentNullException();
+
+            if (!GetPresentedCourses()
+                .Any(s => s.SemesterPresentation == subject.SemesterPresentation &&
+                s.TimeSpan == subject.TimeSpan &&
+                s.Professor.SimultaneousTeaching))
+                Tables.Subjects.Add(subject);
+
+            if (!GetPresentedCourses().Any(s => s.SemesterPresentation == subject.SemesterPresentation))
+                Tables.Subjects.Add(subject);
+
         }
         bool isEqual(Professor professor)
         {
-            return professor.FirstName==this.FirstName && professor.LastName==this.LastName && professor.Groups == this.Groups && professor.SimultaneousTeaching == this.SimultaneousTeaching;
+            return professor.FullName == this.FullName && professor.GroupID == this.GroupID && professor.SimultaneousTeaching == this.SimultaneousTeaching;
         }
         bool IsDuplicate()
         {
-            foreach (var professor in GetFromFile())
+            foreach (var professor in FileReader.GetProffesors())
             {
                 if (isEqual(professor))
                     return true;
@@ -57,6 +79,7 @@ namespace HarryPotter
 
             return false;
         }
+
         public void WriteToFile()
         {
             if (!IsDuplicate())
@@ -65,7 +88,7 @@ namespace HarryPotter
 
         public string ReadyToWrite()
         {
-            return $"{FirstName}|{LastName}|{Groups}|{SimultaneousTeaching}";
+            return $"{ProfessorID}|{GroupID}|{SimultaneousTeaching}|{AllowedPersonID}";
         }
 
 

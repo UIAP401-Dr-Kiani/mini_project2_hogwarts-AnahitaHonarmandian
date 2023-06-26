@@ -1,32 +1,42 @@
-﻿using System;
+﻿
+using HarryPotter.DataBase;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WorkHandler;
 using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
     public class AllowedPerson : Human
     {
-        //TODO- schedule
-
-        public int RoomNumber{ get  ;}
-        public Pet Pet { get ; }       
-         
+        public int AllowedPersonID { get; set; }
+        public int RoomNumber { get; }
         public bool HasBaggage { get; }
+        public Pet Pet { get; }
         public Role Role { get; }
 
-        public List<Letter> ReceivedLetters { get; }
-
         public new string FileName { get => "AllowedPerson.txt"; }
-       
 
-       public AllowedPerson(string firstName, string lastName, 
+        public AllowedPerson(Human human, int allowedPersonID, int roomNumber, bool hasBaggage, Pet pet, Role role)
+            : base(human.FirstName, human.LastName,
+                  human.BirthYear, human.Gender,
+                  human.FatherName, human.Username,
+                  human.Password, human.Race)
+        {
+            AllowedPersonID = allowedPersonID;
+            RoomNumber = roomNumber;
+            HasBaggage = hasBaggage;
+            Pet = pet;
+            Role = role;
+        }
+
+        public AllowedPerson(string firstName, string lastName,
            int birthyear, GenderType gender, string fatherName,
            string username, string password, RaceBlood race,
-           int roomNumber, Pet pet,  bool hasBaggage, Role role):
-            
+           int roomNumber, Pet pet, bool hasBaggage, Role role) :
+
             base(firstName, lastName, birthyear,
                 gender, fatherName, username, password, race)
         {
@@ -34,35 +44,35 @@ namespace HarryPotter
             Pet = pet;
             HasBaggage = hasBaggage;
             Role = role;
-            ReceivedLetters = new List<Letter>();
         }
 
-        public void AddToLetters (Letter letter)
-        {
-            ReceivedLetters.Add(letter);
-        }
+        public static Human GetHuman(string username) => Tables.Humans.FirstOrDefault(p => p.Username == username);
 
         public List<AllowedPerson> GetFromFile()
         {
-            var AllowedPerson = new List<AllowedPerson>();
             var list_temp = FileWorker.Read(FileName);
+            var allowedPeople = new List<AllowedPerson>();
 
             foreach (List<string> person_info in list_temp)
             {
-               
-                int roomNumber = int.Parse(person_info[0]);
-                Enum.TryParse(person_info[1], out Pet pet);
-                var hasBaggage = person_info[2];
-                Enum.TryParse(person_info[3], out Role role);
-                var letters = person_info[4];
+                int id = int.Parse(person_info[0]);
+                int roomNumber = int.Parse(person_info[1]);
+                var hasBaggage = bool.Parse(person_info[2]);
+                Enum.TryParse(person_info[3], out Pet pet);
+                Enum.TryParse(person_info[4], out Role role);
 
-                AllowedPerson.Add(new AllowedPerson(roomNumber,pet,hasBaggage,role,letters));;
+                var username = person_info[5];
+                var human = GetHuman(username);
+
+                allowedPeople.Add(new AllowedPerson(human, id, roomNumber, hasBaggage, pet, role));
+
             }
-            return AllowedPerson;
+            return allowedPeople;
         }
+
         bool isEqual(AllowedPerson allowedPerson)
         {
-            return  allowedPerson.Pet ==this.Pet && allowedPerson.Role==this.Role && allowedPerson.HasBaggage==this.HasBaggage;
+            return allowedPerson.Pet == this.Pet && allowedPerson.Role == this.Role && allowedPerson.HasBaggage == this.HasBaggage;
         }
         bool IsDuplicate()
         {
@@ -82,7 +92,9 @@ namespace HarryPotter
 
         public string ReadyToWrite()
         {
-            return $"{RoomNumber}|{HasBaggage}|{Pet}|{Role}|{ReceivedLetters}";
+            return $"{AllowedPersonID}|{RoomNumber}|{HasBaggage}|{Pet}|{Role}|{Username}";
         }
+
+       
     }
 }

@@ -1,64 +1,53 @@
-﻿using System;
+﻿using HarryPotter.DataBase;
+using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
     public class Dumbledore : AllowedPerson
     {
-        
-        public List<Dorm> DormList { get ; }
+        public List<Dorm> DormList { get; }
+        public List<Letter> Letters { get; private set; }
 
-        public new string FileName { get => "Dumbledore.txt"; }
+        //public List<Student> Students { get; private set; }
 
-        public Dumbledore(List<Dorm> dormList):
+        public List<string> Students { get; private set; }
+        public Dumbledore(List<Dorm> dormList) :
              base("Albus", "Dumbledore", 1800,
             Enums.GenderType.MALE, "Christopher",
             "Admin", "1", Enums.RaceBlood.PURE_BLOOD,
             0, Enums.Pet.OWL, true, Enums.Role.TEACHER)
         {
             DormList = dormList;
+            Letters = new List<Letter>();
         }
 
-        //public List<Dumbledore> GetFromFile()
-        //{
-        //    var dumbledore = new List<Dumbledore>();
-        //    var list_temp = FileWorker.Read(FileName);
-
-        //    foreach (List<string> person_info in list_temp)
-        //    {
-        //        string firstName = person_info[0];
-        //        string lastName = person_info[1];
-        //        int birthyear = int.Parse(person_info[2]);
-        //        Enum.TryParse(person_info[3], out GenderType gender);
-        //        var fatherName = person_info[4];
-        //        var username = person_info[5];
-        //        var password = person_info[6];
-        //        Enum.TryParse(person_info[7], out RaceBlood race);
-
-        //        dumbledore.Add(new Dumbledore(firstName, lastName, birthyear, gender, fatherName, username, password, race));
-        //    }
-        //    return dumbledore;
-        //}
-       
-        //public void WriteToFile()
-        //{
+        public static void SendLetter(int student_id)
+        {
             
-        //        FileWorker.Write(FileName, ReadyToWrite());
-        //}
+            Console.WriteLine(@"Whom do you want to send letter to?
+student id:");
+            student_id = Convert.ToInt32(Console.ReadLine());
 
-        //public string ReadyToWrite()
-        //{
-        //    return $"{FirstName}|{LastName}|{BirthYear}|{Gender}|{FatherName}|{Username}|{Password}|{Race}";
-        //}
 
+
+        }
+
+        public void ReceivedLetters(Letter letter)
+        {
+            Letters.Add(letter);
+        }
+
+        public void AddStudents(List<string> Students)
+        {
+            Console.WriteLine("Student information:");
+            string info = Console.ReadLine();
+            Students.Add(info);
+
+           
+        }
 
     }
 
-
-    
 }

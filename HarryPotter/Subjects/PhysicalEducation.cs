@@ -9,12 +9,11 @@ namespace HarryPotter
     public class PhysicalEducation : Subject
         
     {
-        public string ClassType { get ; }
-
-        public PhysicalEducation(string name, int capacity, uint semesterPresentation, uint minutesDuration,string classType)
-            :base( name, capacity, semesterPresentation, minutesDuration)
+        public string ClassType { get; }
+        public PhysicalEducation(string name, int capacity, uint semesterPresentation, uint minutesDuration, string classType, int professorID)
+            : base(name, capacity, semesterPresentation, minutesDuration, professorID)
         {
-           ClassType = classType;
+            ClassType = classType;
         }
     }
 }

@@ -9,7 +9,6 @@ namespace WorkHandler
 {
     public static class FileWorker
     {
-
         public static List<List<string>> Read(string filename)
         {
             var lines = new List<List<string>>();

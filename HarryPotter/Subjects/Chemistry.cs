@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace HarryPotter
 {
@@ -10,11 +6,10 @@ namespace HarryPotter
     {
         public List<Chemicals> Chemicals { get; }
 
-        public Chemistry(string name, int capacity, uint semesterPresentation, uint minutesDuration):
-
-            base( name, capacity, semesterPresentation, minutesDuration)
+        public Chemistry(string name, int capacity, uint semesterPresentation, uint minutesDuration, int professorID)
+            : base(name, capacity, semesterPresentation, minutesDuration, professorID)
         {
-            Chemicals = new List<Chemicals>();  
+            Chemicals = new List<Chemicals>();
         }
     }
 }

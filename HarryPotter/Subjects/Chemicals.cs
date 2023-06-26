@@ -1,20 +1,17 @@
-﻿using System;
+﻿using HarryPotter.FileHandler;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HarryPotter.Enums;
+using WorkHandler;
 
 namespace HarryPotter
 {
-    public class Chemicals : IFileWorker<Chemicals>
+    public class Chemicals : IFileWorker
     {
         public string Name { get; }
-         public string Formula { get; }
+        public string Formula { get; }
         public string FileName { get => "Chemistry.txt"; }
 
-        public Chemicals(string name,string formula) {
+        public Chemicals(string name, string formula)
+        {
             Name = name;
             Formula = formula;
         }
@@ -24,28 +21,13 @@ namespace HarryPotter
         }
 
 
-        public List<Chemicals> GetFromFile()
-        {
-            var chemicals = new List<Chemicals>();
-            var list_temp = FileWorker.Read(FileName);
-
-            foreach (List<string> chem_info in list_temp)
-            {
-                string name = chem_info[0];
-                string formula = chem_info[1];
-               
-
-                chemicals.Add(new Chemicals(name, formula));
-            }
-            return chemicals;
-        }
         bool isEqual(Chemicals chemicals)
         {
             return chemicals.Name == this.Name && chemicals.Formula == this.Formula;
         }
         bool IsDuplicate()
         {
-            foreach (var chemicals in GetFromFile())
+            foreach (var chemicals in FileReader.GetChemicals())
             {
                 if (isEqual(chemicals))
                     return true;
@@ -56,10 +38,10 @@ namespace HarryPotter
         public void WriteToFile()
         {
             if (!IsDuplicate())
-                FileWorker.Write(FileName, ReadyToWrite());
+                FileWorker.Write(FileName, ConvertToStringFile());
         }
 
-        public string ReadyToWrite()
+        public string ConvertToStringFile()
         {
             return $"{Name}|{Formula}";
         }

@@ -8,8 +8,8 @@ namespace HarryPotter.Subjects
 {
     internal class Semester4 : Herbology
     {
-        public Semester4(int capacity, uint semesterPresentation, uint minutesDuration) :
-          base("Semester1", capacity, semesterPresentation, 200)
+        public Semester4(int capacity, uint semesterPresentation, uint minutesDuration, int professorID) :
+           base("Semester3", capacity, semesterPresentation, 250, professorID)
         {
 
         }

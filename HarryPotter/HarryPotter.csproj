@@ -43,13 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase\Tables.cs" />
+    <Compile Include="Extensions\ProfessorExtensions.cs" />
+    <Compile Include="FileHandler\FileReader.cs" />
+    <Compile Include="Graduation.cs" />
     <Compile Include="IFileWorker.cs" />
+    <Compile Include="Panels\AdminPanel.cs" />
+    <Compile Include="Panels\FirstPanel.cs" />
+    <Compile Include="Panels\ProfessorPanel.cs" />
+    <Compile Include="Panels\StudentPanel.cs" />
     <Compile Include="Role\AllowedPerson.cs" />
     <Compile Include="Subjects\Chemicals.cs" />
     <Compile Include="Subjects\Chemistry.cs" />
     <Compile Include="Dorm.cs" />
     <Compile Include="Role\Dumbledore.cs" />
-    <Compile Include="Enums.cs" />
+    <Compile Include="ProjectEnums\Enums.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Subjects\Herbology.cs" />
     <Compile Include="Role\Human.cs" />
@@ -67,9 +75,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role\Student.cs" />
+    <Compile Include="TrainTicket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkHandler\WorkHandler.csproj">
+      <Project>{16b2da48-c0db-4307-99ff-43a72ed52093}</Project>
+      <Name>WorkHandler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Filetxt\Human.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

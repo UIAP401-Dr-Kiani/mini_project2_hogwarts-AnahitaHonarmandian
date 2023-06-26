@@ -1,3 +1,11 @@
 C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.AssemblyReference.cache
 C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.SuggestedBindingRedirects.cache
 C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.CoreCompileInputs.cache
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\bin\Debug\HarryPotter.exe.config
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\bin\Debug\HarryPotter.exe
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\bin\Debug\HarryPotter.pdb
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\bin\Debug\WorkHandler.dll
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\bin\Debug\WorkHandler.pdb
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.csproj.CopyComplete
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.exe
+C:\Anahita\C#\Harry Potter\mini_project2_hogwarts-AnahitaHonarmandian\HarryPotter\obj\Debug\HarryPotter.pdb

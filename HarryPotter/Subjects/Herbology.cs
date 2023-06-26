@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace HarryPotter
 {
-     public abstract class Herbology : Subject
-    
+    public abstract class Herbology : Subject
+
     {
         public abstract List<Plants> PlantsList();
-        public Herbology(string name, int capacity, uint semesterPresentation, uint minutesDuration) :
-            base(name, capacity, semesterPresentation, minutesDuration)
+        public Herbology(string name, int capacity, uint semesterPresentation, uint minutesDuration, int professorID)
+            : base(name, capacity, semesterPresentation, minutesDuration, professorID)
         {
 
         }

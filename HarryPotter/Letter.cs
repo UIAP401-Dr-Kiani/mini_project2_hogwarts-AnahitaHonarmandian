@@ -1,67 +1,64 @@
-﻿using System;
+﻿using HarryPotter.FileHandler;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorkHandler;
 using static HarryPotter.Enums;
 
 namespace HarryPotter
 {
-    public class Letter : IFileWorker<Letter>
+    public class Letter
     {
         public Guid ID { get; }
         public string Title { get; }
         public string Receiver { get; }
         public string Context { get; }
         public DateTime WriteDateTime { get; }
-        public string FileName { get => "Letter.txt"; }
+        public bool IsRead { get; private set; }
 
-        Letter( string title, string receiver, string context)
+       
+        public Letter(string title, string receiver, string context) : this(Guid.NewGuid(), title, receiver, context, DateTime.Now, false)
         {
-            
+
+        }
+
+        
+        public static void GetFromInput()
+        {
+            Console.WriteLine("Title: ");
+            string title = Console.ReadLine();
+
+            Console.WriteLine("Receiver: ");
+            string receiver = Console.ReadLine();
+
+            Console.WriteLine("Context: ");
+            string context = Console.ReadLine();
+
+            var letter = new Letter(title, receiver, context);
+            DataBase.Tables.Letters.Add(letter);
+        }
+
+        public Letter(Guid Id, string title, string receiver, string context, DateTime writeDateTime, bool isRead)
+        {
+            ID = Id;
             Title = title;
             Receiver = receiver;
             Context = context;
-            WriteDateTime = DateTime.Now;
-            ID= Guid.NewGuid();
-
-        }
-
-       Letter(Guid Id, string title, string receiver, string context, DateTime writeDateTime) 
-        { 
-            ID=Id;
-            Title=title;
-            Receiver=receiver;
-            Context=context;
             WriteDateTime = writeDateTime;
+            IsRead = isRead;
         }
 
-        public List<Letter> GetFromFile()
-        {
-            var letter = new List<Letter>();
-            var list_temp = FileWorker.Read(FileName);
-
-            foreach (List<string> letter_info in list_temp)
-            {
-                var id = letter_info[0];
-                string title = letter_info[1];
-                string receiver = letter_info[2];
-                string context = letter_info[3];
-                var writeDateTime = letter_info[4];
-                
-
-                letter.Add(new Letter(id, title, receiver, context, writeDateTime));
-            }
-            return letter;
-        }
         bool isEqual(Letter letter)
         {
             return letter.ID == this.ID && letter.Title == this.Title && letter.Receiver == this.Receiver;
         }
+
         bool IsDuplicate()
         {
-            foreach (var letter in GetFromFile())
+            foreach (var letter in FileReader.GetLetters())
             {
                 if (isEqual(letter))
                     return true;
@@ -72,7 +69,7 @@ namespace HarryPotter
         public void WriteToFile()
         {
             if (!IsDuplicate())
-                FileWorker.Write(FileName, ReadyToWrite());
+                FileWorker.Write("Letter.txt", ReadyToWrite());
         }
 
         public string ReadyToWrite()

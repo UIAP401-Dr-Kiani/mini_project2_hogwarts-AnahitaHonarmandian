@@ -9,8 +9,8 @@ namespace HarryPotter
     public class Semester1 : Herbology
     {
 
-        public Semester1(int capacity, uint semesterPresentation) :
-            base("Semester1", capacity, semesterPresentation, 100)
+        public Semester1(int capacity, uint semesterPresentation, uint minutesDuration, int professorID) :
+           base("Semester3", capacity, semesterPresentation, 100, professorID)
         {
         }
         public override List<Plants> PlantsList()

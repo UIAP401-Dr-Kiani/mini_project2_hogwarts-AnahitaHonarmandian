@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace HarryPotter
 {
     public class MagicHistory : Subject
     {
-       
-        public List<Spell> Spells { get ; }
-
-        public MagicHistory(string name, int capacity, uint semesterPresentation, uint minutesDuration):
-            base( name,  capacity,  semesterPresentation,  minutesDuration)
+        public List<Spell> Spells { get; }
+        public MagicHistory(string name, int capacity, uint semesterPresentation, uint minutesDuration, int professorID)
+            : base(name, capacity, semesterPresentation, minutesDuration, professorID)
         {
-            Spells=new List<Spell>();   
+            Spells = new List<Spell>();
         }
 
         public void AddNewMagic(Spell newMagic)
